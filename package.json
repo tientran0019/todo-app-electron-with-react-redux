@@ -1,0 +1,38 @@
+{
+  "name": "todo-app-electron-with-react-redux",
+  "version": "0.1.0",
+  "private": true,
+  "repository": "https://github.com/ductienas/todo-app-electron-with-react-redux.git",
+  "author": "Trần Đức Tiến <ductienas@gmail.com>",
+  "devDependencies": {
+    "foreman": "^3.0.0",
+    "react-scripts": "0.8.5",
+    "react-test-renderer": "^16.7.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "electron": "^4.0.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-redux": "^6.0.0",
+    "redux": "^4.0.1",
+    "reselect": "^4.0.0"
+  },
+  "homepage": "./",
+  "main": "src/electron-starter.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "dev": "nf start -p 3000"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
