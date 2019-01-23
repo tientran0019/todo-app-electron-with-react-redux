@@ -1,13 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Footer from './Footer'
-import VisibleTodoList from '../containers/VisibleTodoList'
+/* eslint-disable jsx-a11y/label-has-for */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React from 'react';
+import PropTypes from 'prop-types';
+import Footer from './Footer';
+import VisibleTodoList from '../containers/VisibleTodoList';
 
-const MainSection = ({ todosCount, completedCount, actions }) =>
-  (
+const MainSection = ({ todosCount, completedCount, actions }) => {
+  return (
     <section className="main">
       {
-        !!todosCount && 
+        !!todosCount &&
         <span>
           <input
             className="toggle-all"
@@ -15,7 +17,7 @@ const MainSection = ({ todosCount, completedCount, actions }) =>
             checked={completedCount === todosCount}
             readOnly
           />
-          <label onClick={actions.completeAllTodos}/>
+          <label onClick={actions.completeAllTodos} />
         </span>
       }
       <VisibleTodoList />
@@ -28,12 +30,13 @@ const MainSection = ({ todosCount, completedCount, actions }) =>
         />
       }
     </section>
-  )
+  );
+};
 
 MainSection.propTypes = {
   todosCount: PropTypes.number.isRequired,
   completedCount: PropTypes.number.isRequired,
-  actions: PropTypes.object.isRequired
-}
+  actions: PropTypes.object.isRequired,
+};
 
 export default MainSection;

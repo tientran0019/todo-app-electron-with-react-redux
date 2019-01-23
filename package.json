@@ -5,8 +5,15 @@
   "repository": "https://github.com/ductienas/todo-app-electron-with-react-redux.git",
   "author": "Trần Đức Tiến <ductienas@gmail.com>",
   "devDependencies": {
+    "eslint": "5.6.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-import-resolver-babel-module": "^5.0.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.4",
     "foreman": "^3.0.0",
-    "react-scripts": "0.8.5",
+    "react-scripts": "^2.1.3",
     "react-test-renderer": "^16.7.0"
   },
   "dependencies": {
@@ -25,6 +32,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "lint": "eslint .",
     "eject": "react-scripts eject",
     "electron": "electron .",
     "dev": "nf start -p 3000"

@@ -4,16 +4,16 @@ import {
   EDIT_TODO,
   COMPLETE_TODO,
   COMPLETE_ALL_TODOS,
-  CLEAR_COMPLETED
-} from '../constants/ActionTypes'
+  CLEAR_COMPLETED,
+} from '../constants/ActionTypes';
 
 const initialState = [
   {
     text: 'Use Redux',
     completed: false,
-    id: 0
-  }
-]
+    id: 0,
+  },
+];
 
 export default function todos(state = initialState, action) {
   switch (action.type) {
@@ -23,40 +23,42 @@ export default function todos(state = initialState, action) {
         {
           id: state.reduce((maxId, todo) => Math.max(todo.id, maxId), -1) + 1,
           completed: false,
-          text: action.text
-        }
-      ]
+          text: action.text,
+        },
+      ];
 
     case DELETE_TODO:
-      return state.filter(todo =>
-        todo.id !== action.id
-      )
+      return state.filter(todo => {
+        return todo.id !== action.id;
+      });
 
     case EDIT_TODO:
-      return state.map(todo =>
-        todo.id === action.id ?
+      return state.map(todo => {
+        return todo.id === action.id ?
           { ...todo, text: action.text } :
-          todo
-      )
+          todo;
+      });
 
     case COMPLETE_TODO:
-      return state.map(todo =>
-        todo.id === action.id ?
+      return state.map(todo => {
+        return todo.id === action.id ?
           { ...todo, completed: !todo.completed } :
-          todo
-      )
+          todo;
+      });
 
     case COMPLETE_ALL_TODOS:
-      const areAllMarked = state.every(todo => todo.completed)
+      // eslint-disable-next-line no-case-declarations
+      const areAllMarked = state.every(todo => todo.completed);
+
       return state.map(todo => ({
         ...todo,
-        completed: !areAllMarked
-      }))
+        completed: !areAllMarked,
+      }));
 
     case CLEAR_COMPLETED:
-      return state.filter(todo => todo.completed === false)
+      return state.filter(todo => todo.completed === false);
 
     default:
-      return state
+      return state;
   }
 }
