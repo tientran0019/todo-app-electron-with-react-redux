@@ -9,7 +9,7 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 ```bash
 # Clone this repository
-git clone https://github.com/ductienas/todo-app-electron-with-react-redux.git
+git clone https://github.com/tientran0019/todo-app-electron-with-react-redux.git
 
 # Go into the repository
 cd todo-app-electron-with-react-redux
@@ -35,4 +35,4 @@ yarn dev
 
 ## Author
 
-Trần Đức Tiến <ductienas@gmail.com>
+Trần Đức Tiến <tientran0019@gmail.com>
