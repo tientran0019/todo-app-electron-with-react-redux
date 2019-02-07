@@ -13,10 +13,10 @@ install:
 script:
 - yarn test
 - yarn build
-# deploy:
-#   provider: surge
-#   skip_cleanup: true
-#   domain: todoapp.surge.sh
-#   project: ./build/
+deploy:
+  provider: surge
+  skip_cleanup: true
+  domain: tientran0019-todoapp.surge.sh
+  project: ./build/
 on:
   branch: master
